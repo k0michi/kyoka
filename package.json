@@ -1,0 +1,36 @@
+{
+  "name": "kyoka",
+  "packageManager": "yarn@3.2.0",
+  "dependencies": {
+    "react": "^18.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.12",
+    "typescript": "^4.7.3"
+  },
+  "description": "Kyoka is a minimalistic state management library, designed for React.",
+  "version": "0.0.1",
+  "main": "./cjs/index.js",
+  "module": "./esm/index.js",
+  "types": "./esm/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k0michi/kyoka.git"
+  },
+  "author": "Komichi <k0michi@koyomi.co> (https://koyomiji.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/k0michi/kyoka/issues"
+  },
+  "homepage": "https://github.com/k0michi/kyoka#readme",
+  "scripts": {
+    "build:esm": "tsc --module esnext --outDir esm --declaration true",
+    "build:cjs": "tsc --module esnext --outDir cjs",
+    "build": "yarn build:esm && yarn build:cjs",
+    "clean": "rm -rf cjs esm"
+  },
+  "files": [
+    "cjs",
+    "esm"
+  ]
+}
